@@ -15,7 +15,7 @@ function displayMessage( message) {
 document.querySelector('.check').addEventListener('click', function(){
   
   const guess = Number(document.querySelector('.guess').value);
-  console.log(guess);
+  // console.log(guess);
 
 //Invalid input or nothing given!
   if(!guess || guess < 0 || guess > 20){
@@ -37,7 +37,7 @@ document.querySelector('.check').addEventListener('click', function(){
 //For all other cases
   else{
     if(score > 1){
-      displayMessage((guess < number)?"😭 less advanced":"🤯 too advanced"); //string changes based on guess greater or lesser than correct number
+      displayMessage((guess < number)?"😭 too low!":"🤯 too high!"); //string changes based on guess greater or lesser than correct number
       score--; 
       document.querySelector('.score').textContent = score;
       }
